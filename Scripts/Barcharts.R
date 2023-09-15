@@ -41,7 +41,7 @@ ggplot(data = na.omit(data_bcA), mapping = aes(y = Dataset, x = Total, fill = De
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
         panel.border = element_rect(fill = NA)) +
   scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
-ggsave(here("Figures", "barchart A.jpg"), width = 7, height = 3, units = "in", dpi = 600)
+ggsave(here("Figures", "barchart gender.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 # Continent
 data_bcB<- subset(data, Demographic == "Continent")
@@ -73,7 +73,7 @@ ggplot(data = na.omit(data_bcB), mapping = aes(y = Dataset, x = Total, fill = De
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
         panel.border = element_rect(fill = NA)) +
   scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
-ggsave(here("Figures", "barchart B.jpg"), width = 7, height = 3, units = "in", dpi = 600)
+ggsave(here("Figures", "barchart continent.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 
 # Language
@@ -94,7 +94,7 @@ ggplot(data = na.omit(data_bcC), mapping = aes(y = Dataset, x = Total, fill = De
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
         panel.border = element_rect(fill = NA)) +
   scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
-ggsave(here("Figures", "barchart C.jpg"), width = 7, height = 3, units = "in", dpi = 600)
+ggsave(here("Figures", "barchart language.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 
 
@@ -115,7 +115,7 @@ ggplot(data = na.omit(data_bcD), mapping = aes(y = Dataset, x = Total, fill = De
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
         panel.border = element_rect(fill = NA)) +
   scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
-ggsave(here("Figures", "barchart D.jpg"), width = 7, height = 3, units = "in", dpi = 600)
+ggsave(here("Figures", "barchart development.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 
 # Prestige
@@ -139,4 +139,4 @@ ggplot(data = na.omit(data_bcE), mapping = aes(y = Dataset, x = Total, fill = De
         panel.border = element_rect(fill = NA),
         panel.background = element_rect(fill = "white")) +
   scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
-ggsave(here("Figures", "barchart E.jpg"), width = 7, height = 3, units = "in", dpi = 600)
+ggsave(here("Figures", "barchart prestige.jpg"), width = 7, height = 3, units = "in", dpi = 600)
