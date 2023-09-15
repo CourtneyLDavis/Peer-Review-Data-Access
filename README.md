@@ -11,6 +11,11 @@ We propose pathways to broaden access to peer review data to make more expedite 
 &nbsp; 
 
 ## Repository Directory
+### Figure 1 - Europe Insets
+
+
+&nbsp; 
+
 ### SI Datasets
 This folder contains all of the data generated and analyzed as part of the current study.
 
@@ -18,3 +23,4 @@ This folder contains all of the data generated and analyzed as part of the curre
 
 ### Scripts
 This folder contains all of the R coding scripts used to summarize the demmographics of authors publishing research on peer review bias.
+
