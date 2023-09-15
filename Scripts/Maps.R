@@ -104,7 +104,7 @@ data_count_sf <- left_join(data_count, World, by = "name") %>%
 # Meta-analysis authors who submitted manuscripts
 data_count_sfA<- subset(data_count_sf, Dataset == "Manuscripts submitted" )
 
-tiff(here("Figures","country mapsA.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","country maps manuscripts submitted.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfA, projection = "+proj=robin") +
@@ -120,7 +120,7 @@ dev.off()
 # Meta-analysis authors with accepted manuscripts
 data_count_sfB<- subset(data_count_sf, Dataset == "Manuscripts accepted" )
 
-tiff(here("Figures","country mapsB.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","country maps manuscripts accepted.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfB, projection = "+proj=robin") +
@@ -135,7 +135,7 @@ dev.off()
 # Authors of studies
 data_count_sfC<- subset(data_count_sf, Dataset == "All studies on bias" )
 
-tiff(here("Figures","country mapsC.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","country maps all studies on bias.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfC, projection = "+proj=robin") +
@@ -149,7 +149,7 @@ dev.off()
 # Authors studied problem
 data_count_sfD<- subset(data_count_sf, Dataset == "Studies on bias for dem" )
 
-tiff(here("Figures","country mapsD.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","country maps studies on bias for dem.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfD, projection = "+proj=robin") +
@@ -163,7 +163,7 @@ dev.off()
 # Authors studied solution
 data_count_sfE<- subset(data_count_sf, Dataset == "Studies on solution for dem" )
 
-tiff(here("Figures","country mapsE.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","country maps studies on solution for dem.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfE, projection = "+proj=robin") +
@@ -182,7 +182,7 @@ dev.off()
 # Meta-analysis authors who submitted manuscripts
 data_count_sfA<- subset(data_count_sf, Dataset == "Manuscritps submitted" )
 
-tiff(here("Figures","europe mapsA.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","europe maps manuscripts submitted.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b.eur, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfA, projection = "+proj=robin") +
@@ -198,7 +198,7 @@ dev.off()
 # Meta-analysis authors with accepted manuscripts
 data_count_sfB<- subset(data_count_sf, Dataset == "Manuscripts accepted" )
 
-tiff(here("Figures","europe mapsB.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","europe maps manuscripts accepted.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b.eur, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfB, projection = "+proj=robin") +
@@ -213,7 +213,7 @@ dev.off()
 # Authors of studies
 data_count_sfC<- subset(data_count_sf, Dataset == "All studies on bias" )
 
-tiff(here("Figures","europe mapsC.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","europe maps all studies on bias.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b.eur, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfC, projection = "+proj=robin") +
@@ -227,7 +227,7 @@ dev.off()
 # Authors studied problem
 data_count_sfD<- subset(data_count_sf, Dataset == "Studies on bias for dem" )
 
-tiff(here("Figures","europe mapsD.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","europe maps studies on bias for dem.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b.eur, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfD, projection = "+proj=robin") +
@@ -241,7 +241,7 @@ dev.off()
 # Authors studied solution
 data_count_sfE<- subset(data_count_sf, Dataset == "Studies on solution for dem" )
 
-tiff(here("Figures","europe mapsE.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
+tiff(here("Figures","europe maps studies on solution for dem.tiff"), width = 3.25, height = 1.2, units = 'in', res = 600, compression = 'lzw')
 jif.map <- tm_shape(World, bb = b.eur, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfE, projection = "+proj=robin") +
