@@ -23,4 +23,3 @@ This folder contains all of the data generated and analyzed as part of the curre
 
 ### Scripts
 This folder contains all of the R coding scripts used to summarize the demmographics of authors publishing research on peer review bias.
-
