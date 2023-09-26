@@ -18,7 +18,7 @@ library(janitor)
 library(readxl)
 
 ############ Load data
-data<-read.csv(here("Data","Dataset 4. Who studies bias.xlsx"))
+data<-read_xlsx(here("Data","Dataset 4. Who studies bias.xlsx"))
 ogdata<- subset(data, Demographic == "Country")
 
 
@@ -109,9 +109,8 @@ jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfA, projection = "+proj=robin") +
   tm_fill(col = "n", title = "# of manuscripts", 
-          alpha = 0.75, palette = "viridis", style = "fixed",
-          breaks = c(1,1001,3001,6001,12001,26001))+
-          #labels = c("1 to 973", "974 to 3,180", "3,181 to 6,139", "6,140 to 12,390", "12,391 to 25,562")) +
+          alpha = 0.75, palette = "viridis", style = "jenks",
+          labels = c("1 to 973", "974 to 3,180", "3,181 to 6,139", "6,140 to 12,390", "12,391 to 25,562")) +
   tm_layout(legend.outside = FALSE, panel.show = F,
             legend.position = c(0.01,0.005), legend.title.size = 0.44, legend.text.size = 0.375)  
 jif.map
@@ -125,8 +124,8 @@ jif.map <- tm_shape(World, bb = b, projection = "+proj=robin") +
   tm_borders(col = "black", lwd = 0.25) +
   tm_shape(data_count_sfB, projection = "+proj=robin") +
   tm_fill(col = "n", title = "# of manuscripts", 
-          alpha = 0.75, palette = "viridis", style = "pretty")+
-          #labels = c("1 to 133", "134 to 338", "339 to 621", "622 to 1,020", "1,021 to 3,383")) +
+          alpha = 0.75, palette = "viridis", style = "jenks",
+          labels = c("1 to 133", "134 to 338", "339 to 621", "622 to 1,020", "1,021 to 3,383")) +
   tm_layout(legend.outside = FALSE, panel.show = F,
             legend.position = c(0.01,0.005), legend.title.size = 0.44, legend.text.size = 0.375)  
 jif.map
