@@ -2,7 +2,7 @@
 #### Panel A-E of Figure 1                               ####
 #### Created by: Courtney Davis                          #### 
 #### Modified by:                                        ####
-#### Last checked: 9 Sep 2023                            ####
+#### Last checked: 26 Jan 2024                           ####
 #############################################################
 
 
@@ -14,12 +14,15 @@ library(viridis)
 library(readxl)
 
 ############ Load data
+############ Load data
 data<-read_xlsx(here("Data","Dataset 4. Who studies bias.xlsx"))
+data <- data[-(data$Dataset == "Manuscripts submitted"),c(1:4)]
 data$Dataset <- factor(data$Dataset, levels = c("Studies on solution for dem",
                                                 "Studies on bias for dem",
                                                 "All studies on bias",
-                                                "Manuscripts accepted",
-                                                "Manuscripts submitted"))
+                                                "Manuscripts accepted"))
+
+
 
 
 ### Plot individual panels
@@ -39,8 +42,9 @@ ggplot(data = na.omit(data_bcA), mapping = aes(y = Dataset, x = Total, fill = De
         text = element_text(size = 20),
         axis.text.y=element_text(margin=margin(r=0)),
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
-        panel.border = element_rect(fill = NA)) +
-  scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
+  panel.border = element_rect(fill = NA),
+        panel.background = element_rect(fill = "white")) +
+scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
 ggsave(here("Figures", "barchart gender.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 # Continent
@@ -71,8 +75,9 @@ ggplot(data = na.omit(data_bcB), mapping = aes(y = Dataset, x = Total, fill = De
         text = element_text(size = 20),
         axis.text.y=element_text(margin=margin(r=0)),
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
-        panel.border = element_rect(fill = NA)) +
-  scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
+        panel.border = element_rect(fill = NA),
+        panel.background = element_rect(fill = "white")) +
+scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
 ggsave(here("Figures", "barchart continent.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 
@@ -92,8 +97,9 @@ ggplot(data = na.omit(data_bcC), mapping = aes(y = Dataset, x = Total, fill = De
         text = element_text(size = 20),
         axis.text.y=element_text(margin=margin(r=0)),
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
-        panel.border = element_rect(fill = NA)) +
-  scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
+        panel.border = element_rect(fill = NA),
+        panel.background = element_rect(fill = "white")) +
+scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
 ggsave(here("Figures", "barchart language.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 
@@ -113,8 +119,9 @@ ggplot(data = na.omit(data_bcD), mapping = aes(y = Dataset, x = Total, fill = De
         text = element_text(size = 20),
         axis.text.y=element_text(margin=margin(r=0)),
         plot.margin = unit(c(0.2,0.5,0.2,0.2),"cm"),
-        panel.border = element_rect(fill = NA)) +
-  scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
+        panel.border = element_rect(fill = NA),
+        panel.background = element_rect(fill = "white")) +
+scale_x_continuous(expand = c(0,0), labels = c(0, 25, 50, 75, 100))
 ggsave(here("Figures", "barchart development.jpg"), width = 7, height = 3, units = "in", dpi = 600)
 
 
